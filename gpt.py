@@ -5,9 +5,7 @@ import logging
 from creds import get_creds  
 from config import *
 
-
-iam_token, folder_id = get_creds()  
-
+IAM_TOKEN, FOLDER_ID = get_creds()  
 
 logging.basicConfig(filename=LOGS,
                     level=logging.DEBUG,
@@ -16,6 +14,7 @@ logging.basicConfig(filename=LOGS,
 
 
 def count_gpt_tokens(messages):
+    IAM_TOKEN, FOLDER_ID = get_creds()  
     url = "https://llm.api.cloud.yandex.net/foundationModels/v1/tokenizeCompletion"
     headers = {
         'Authorization': f'Bearer {IAM_TOKEN}',
@@ -32,8 +31,8 @@ def count_gpt_tokens(messages):
         return 0
 
 
-# запрос к GPT
 def ask_gpt(messages):
+    IAM_TOKEN, FOLDER_ID = get_creds()  
     url = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
     headers = {
         'Authorization': f'Bearer {IAM_TOKEN}',
