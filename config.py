@@ -17,7 +17,7 @@ SYSTEM_PROMPT = [{'role': 'system', 'text': 'Ты веселый собесед�
                                             'Поддерживай диалог.'
                                             'Изображай человека'}] 
 
-HOME_DIR = '/home/student/final6'
+HOME_DIR = '/home/student/final8'
 LOGS = f'{HOME_DIR}/logs.txt'
 DB_FILE = f'{HOME_DIR}/messages.db'
 
